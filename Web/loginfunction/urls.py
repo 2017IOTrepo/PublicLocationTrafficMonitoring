@@ -5,5 +5,4 @@ urlpatterns = [
     url(r'^$',userlogin,name="login"),
     url(r'^register/$',register,name="register"),
     url(r'^clean/$',clean,name="clean"),
-
 ]

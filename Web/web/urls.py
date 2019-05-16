@@ -21,4 +21,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^login/', include("loginfunction.urls",namespace="login")),
     url(r'^index/', login.index,name="index"),
+    url(r'^charts/', login.charts,name="charts"),
+    url(r'^tables/', login.tables,name="tables"),
+
 ]

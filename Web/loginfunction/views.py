@@ -3,6 +3,8 @@ from __future__ import unicode_literals
 from django.shortcuts import render, redirect
 from .forms import RegistrationForm, LoginForm
 from django.contrib.auth import authenticate, login
+
+
 # from django.http import HttpResponse
 
 def userlogin(request):
@@ -43,6 +45,14 @@ def userlogin(request):
 
 def index(request):
     return render(request, 'index.html')
+
+
+def charts(request):
+    return render(request, 'charts.html')
+
+
+def tables(request):
+    return render(request, 'tables.html')
 
 
 # Create your views here.
