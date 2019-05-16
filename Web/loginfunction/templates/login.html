@@ -17,20 +17,32 @@
   <link href={% static "css/sb-admin.css" %} rel="stylesheet">
 </head>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54dd4c9c2efebe5e373504f127e4249b0c01bbfe
 <body class="bg-dark">
   <div class="container">
     <div class="card card-login mx-auto mt-5">
       <div class="card-header">登录</div>
       <div class="card-body">
+<<<<<<< HEAD
         <form class='form-login' action="." method="post">
+=======
+        <form class='form-login' action="/login/" method="post">
+>>>>>>> 54dd4c9c2efebe5e373504f127e4249b0c01bbfe
             {% if message %}
                     <div class="alert alert-warning">{{ message }}</div>
                 {% endif %}
                 {% csrf_token %}
           <div class="form-group">
+<<<<<<< HEAD
             <label for="username">用户名</label>
             <input class="form-control" name="username" type="text"  placeholder="输入账户名">
+=======
+            <label for="username">邮箱</label>
+            <input class="form-control" name="username" type="email"  placeholder="输入您的邮箱">
+>>>>>>> 54dd4c9c2efebe5e373504f127e4249b0c01bbfe
           </div>
           <div class="form-group">
             <label for="password">密码</label>
@@ -39,6 +51,7 @@
           <button class="btn btn-primary btn-block" >登录</button>
         </form>
         <div class="text-center">
+<<<<<<< HEAD
           <a class="d-block small mt-3" href={% url "login:register" %}>注册</a>
 {#          <a class="d-block small" href="forgot-password.html">忘记密码?</a>#}
         </div>
@@ -51,6 +64,20 @@
 {#  <script src={% static  "vendor/bootstrap/js/bootstrap.bundle.min.js" %}></script>#}
   <!-- Core plugin JavaScript-->
 {#  <script src={% static "vendor/jquery-easing/jquery.easing.min.js" %}></script>#}
+=======
+          <a class="d-block small mt-3" href="register.html">注册</a>
+          <a class="d-block small" href="forgot-password.html">忘记密码?</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- Bootstrap core JavaScript-->
+  <script src={% static "vendor/jquery/jquery.min.js" %}></script>
+  <script src={% static  "vendor/bootstrap/js/bootstrap.bundle.min.js" %}></script>
+  <!-- Core plugin JavaScript-->
+  <script src={% static "vendor/jquery-easing/jquery.easing.min.js" %}></script>
+>>>>>>> 54dd4c9c2efebe5e373504f127e4249b0c01bbfe
 </body>
 
 </html>

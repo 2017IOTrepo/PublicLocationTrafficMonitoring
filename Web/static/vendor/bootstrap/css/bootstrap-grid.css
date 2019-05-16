@@ -60,7 +60,10 @@ html {
 }
 
 .row {
+<<<<<<< HEAD
     height: 200px;
+=======
+>>>>>>> 54dd4c9c2efebe5e373504f127e4249b0c01bbfe
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
@@ -806,8 +809,13 @@ html {
     max-width: 16.666667%;
   }
   .col-xl-3 {
+<<<<<<< HEAD
     -ms-flex: 0 0 100%;
         flex: 0 0 100%;
+=======
+    -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+>>>>>>> 54dd4c9c2efebe5e373504f127e4249b0c01bbfe
     max-width: 25%;
   }
   .col-xl-4 {
