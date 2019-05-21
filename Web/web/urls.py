@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import url,include
 from django.contrib import admin
+from django.views import static
+from django.conf import settings
 from loginfunction import views as login
 
 urlpatterns = [
@@ -23,5 +25,4 @@ urlpatterns = [
     url(r'^index/', login.index,name="index"),
     url(r'^charts/', login.charts,name="charts"),
     url(r'^tables/', login.tables,name="tables"),
-
 ]
