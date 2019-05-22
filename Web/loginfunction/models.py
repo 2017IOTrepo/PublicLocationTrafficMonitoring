@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
-from __future__ import unicode_literals
+
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
 
 from django.db import models
 from django import forms
@@ -17,8 +20,19 @@ class user(models.Model):
 
     class Meta:
         ordering = ['c_time']
-        verbose_name = '用户'
-        verbose_name_plural = '用户'
+        verbose_name = u'用户'
+        verbose_name_plural = u'用户'
 
 
+class human_traffic_count(models.Model):
+    count = models.IntegerField()
+    c_time = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return u"当前人流总数"
+
+    class Meta:
+        ordering = ['c_time']
+        verbose_name = '人流量'
+        verbose_name_plural = '当前人流量'
 # Create your models here.
