@@ -3,7 +3,9 @@ from __future__ import unicode_literals
 from django.shortcuts import render, redirect
 from .forms import RegistrationForm, LoginForm
 from django.contrib.auth import authenticate, login
-
+from django.http import HttpResponse
+from .models import data,security_staff
+import json
 
 # from django.http import HttpResponse
 
@@ -18,10 +20,11 @@ def userlogin(request):
             user = authenticate(username=cd["username"], password=cd["password"])
             if user:
                 login(request, user)
-                return redirect('/index/')  # 重定向
+                return redirect('/index')  # 重定向
             else:
                 message = "登录失败，用户名或密码错误，请检查您的用户名密码"
                 return render(request, "login.html", {"message": message})
+    return redirect('/login')
 
     #     username = request.POST.get('username')
     #     password = request.POST.get('password')
@@ -48,11 +51,20 @@ def index(request):
 
 
 def charts(request):
-    return render(request, 'charts.html')
+   return render(request,"charts.html")
 
 
 def tables(request):
-    return render(request, 'tables.html')
+    persons=security_staff().selectall()
+    str=""
+    for person in persons:
+        str+="<tr><td>"+person[0]+"</td>" \
+              "<td>"+person[1]+"</td>" \
+              "<td>"+person[2]+"</td>" \
+              "<td>"+person[3]+"</td>" \
+              "<td>"+person[4]+"</td>" \
+              "<td>"+person[5]+"</td></tr>"
+    return render(request, 'tables.html',{'data':str})
 
 
 # Create your views here.
@@ -77,3 +89,11 @@ def register(request):
 def clean(request):
     request.session.flush()
     return redirect("http://127.0.0.1:8000/login/")
+
+def part_flush(request):
+    results=data.objects.all()[:12]  # 在  前加一个负号，可以实现倒序
+    datas=[
+        [result.time for result in results],
+        [result.pedestrian_flow for result in results]
+           ]
+    return HttpResponse(json.dumps(datas), content_type='application/json')

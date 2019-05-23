@@ -18,11 +18,13 @@ from django.contrib import admin
 from django.views import static
 from django.conf import settings
 from loginfunction import views as login
-
+from loginfunction import urls as login_urls
+from loginfunction.views import part_flush
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^login/', include("loginfunction.urls",namespace="login")),
+    url(r'^login/', include((login_urls,'login'),namespace='login')),
     url(r'^index/', login.index,name="index"),
     url(r'^charts/', login.charts,name="charts"),
     url(r'^tables/', login.tables,name="tables"),
+    url(r'^part_flush/',part_flush),
 ]

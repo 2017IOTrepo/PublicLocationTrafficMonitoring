@@ -1,120 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/web/urls.py" line="24" />
+    <bookmark url="file://$PROJECT_DIR$/web/urls.py" line="25" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d333e04-1318-4f31-beeb-b12e824029f5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/web.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loginfunction/templates/charts.html" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/templates/charts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/.jsbeautifyrc" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/.jsbeautifyrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/blank.html" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/blank.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/cards.html" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/cards.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/sb-admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/css/sb-admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/sb-admin.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/css/sb-admin.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/forgot-password.html" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/forgot-password.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/gulpfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/sb-admin-charts.js" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/js/sb-admin-charts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/sb-admin-charts.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/js/sb-admin-charts.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/sb-admin-datatables.js" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/js/sb-admin-datatables.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/sb-admin-datatables.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/js/sb-admin-datatables.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/sb-admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/js/sb-admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/sb-admin.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/js/sb-admin.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/pug/blank.pug" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/pug/blank.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/pug/cards.pug" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/pug/cards.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/pug/charts.pug" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/pug/charts.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/pug/forgot-password.pug" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/pug/forgot-password.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/pug/includes/css/core.pug" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/pug/includes/css/core.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/pug/includes/css/custom.pug" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/pug/includes/css/custom.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/pug/includes/footer.pug" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/pug/includes/footer.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/pug/includes/js/core.pug" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/pug/includes/js/core.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/pug/includes/js/custom.pug" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/pug/includes/js/custom.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/pug/includes/modals/logout.pug" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/pug/includes/modals/logout.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/pug/includes/navbar.pug" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/pug/includes/navbar.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/pug/includes/scroll-to-top.pug" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/pug/includes/scroll-to-top.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/pug/index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/pug/index.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/pug/login.pug" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/pug/login.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/pug/navbar.pug" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/pug/navbar.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/pug/register.pug" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/pug/register.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/pug/tables.pug" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/pug/tables.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/scss/_cards.scss" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/scss/_cards.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/scss/_footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/scss/_footer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/scss/_global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/scss/_global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/scss/_login.scss" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/scss/_login.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/scss/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/scss/_mixins.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/scss/_utilities.scss" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/scss/_utilities.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/scss/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/scss/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/scss/navbar/_navbar_colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/scss/navbar/_navbar_colors.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/scss/navbar/_navbar_fixed.scss" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/scss/navbar/_navbar_fixed.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/scss/navbar/_navbar_global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/scss/navbar/_navbar_global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/scss/navbar/_navbar_static.scss" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/scss/navbar/_navbar_static.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/scss/navbar/_navbar_toggle.scss" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/scss/navbar/_navbar_toggle.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/scss/sb-admin.scss" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/scss/sb-admin.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/tables.html" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/tables.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/bootstrap/css/bootstrap-grid.css" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/bootstrap/css/bootstrap-grid.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/bootstrap/css/bootstrap-grid.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/bootstrap/css/bootstrap-grid.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/bootstrap/css/bootstrap-reboot.css" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/bootstrap/css/bootstrap-reboot.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/bootstrap/css/bootstrap-reboot.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/bootstrap/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/bootstrap/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/bootstrap/css/bootstrap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/bootstrap/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/bootstrap/js/bootstrap.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/bootstrap/js/bootstrap.bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/bootstrap/js/bootstrap.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/bootstrap/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/bootstrap/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/bootstrap/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/bootstrap/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/bootstrap/js/bootstrap.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/chart.js/Chart.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/chart.js/Chart.bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/chart.js/Chart.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/chart.js/Chart.bundle.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/chart.js/Chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/chart.js/Chart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/chart.js/Chart.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/chart.js/Chart.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/datatables/dataTables.bootstrap4.css" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/datatables/dataTables.bootstrap4.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/datatables/dataTables.bootstrap4.js" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/datatables/dataTables.bootstrap4.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/datatables/jquery.dataTables.js" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/datatables/jquery.dataTables.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/font-awesome/css/font-awesome.css" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/font-awesome/css/font-awesome.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/font-awesome/css/font-awesome.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/font-awesome/css/font-awesome.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/font-awesome/fonts/FontAwesome.otf" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/font-awesome/fonts/FontAwesome.otf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/font-awesome/fonts/fontawesome-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/font-awesome/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/font-awesome/fonts/fontawesome-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/font-awesome/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/font-awesome/fonts/fontawesome-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/font-awesome/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/font-awesome/fonts/fontawesome-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/font-awesome/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/font-awesome/fonts/fontawesome-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/font-awesome/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/font-awesome/less/animated.less" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/font-awesome/less/animated.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/font-awesome/less/bordered-pulled.less" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/font-awesome/less/bordered-pulled.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/font-awesome/less/core.less" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/font-awesome/less/core.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/font-awesome/less/fixed-width.less" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/font-awesome/less/fixed-width.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/font-awesome/less/font-awesome.less" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/font-awesome/less/font-awesome.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/font-awesome/less/icons.less" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/font-awesome/less/icons.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/font-awesome/less/larger.less" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/font-awesome/less/larger.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/font-awesome/less/list.less" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/font-awesome/less/list.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/font-awesome/less/mixins.less" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/font-awesome/less/mixins.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/font-awesome/less/path.less" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/font-awesome/less/path.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/font-awesome/less/rotated-flipped.less" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/font-awesome/less/rotated-flipped.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/font-awesome/less/screen-reader.less" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/font-awesome/less/screen-reader.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/font-awesome/less/stacked.less" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/font-awesome/less/stacked.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/font-awesome/less/variables.less" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/font-awesome/less/variables.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/font-awesome/scss/_animated.scss" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/font-awesome/scss/_animated.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/font-awesome/scss/_bordered-pulled.scss" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/font-awesome/scss/_bordered-pulled.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/font-awesome/scss/_core.scss" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/font-awesome/scss/_core.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/font-awesome/scss/_fixed-width.scss" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/font-awesome/scss/_fixed-width.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/font-awesome/scss/_icons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/font-awesome/scss/_icons.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/font-awesome/scss/_larger.scss" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/font-awesome/scss/_larger.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/font-awesome/scss/_list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/font-awesome/scss/_list.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/font-awesome/scss/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/font-awesome/scss/_mixins.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/font-awesome/scss/_path.scss" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/font-awesome/scss/_path.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/font-awesome/scss/_rotated-flipped.scss" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/font-awesome/scss/_rotated-flipped.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/font-awesome/scss/_screen-reader.scss" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/font-awesome/scss/_screen-reader.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/font-awesome/scss/_stacked.scss" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/font-awesome/scss/_stacked.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/font-awesome/scss/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/font-awesome/scss/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/font-awesome/scss/font-awesome.scss" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/font-awesome/scss/font-awesome.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/jquery-easing/jquery.easing.compatibility.js" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/jquery-easing/jquery.easing.compatibility.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/jquery-easing/jquery.easing.js" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/jquery-easing/jquery.easing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/jquery-easing/jquery.easing.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/jquery-easing/jquery.easing.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/jquery/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/jquery/jquery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/jquery/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/vendor/jquery/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginfunction/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginfunction/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginfunction/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginfunction/static/js/sb-admin-charts.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/js/sb-admin-charts.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginfunction/templates/table1.html" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/templates/table1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginfunction/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginfunction/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/urls.py" afterDir="false" />
     </list>
@@ -160,24 +63,24 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/wsgi.py">
+        <entry file="file://$PROJECT_DIR$/loginfunction/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+            <state relative-caret-position="180">
+              <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
               <folding>
-                <element signature="e#220#229#0" expanded="true" />
+                <element signature="e#0#32#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/loginfunction/urls.py">
+        <entry file="file://$PROJECT_DIR$/loginfunction/static/js/sb-admin-charts.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
+            <state relative-caret-position="-300">
+              <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
               <folding>
-                <element signature="e#0#32#0" expanded="true" />
+                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -189,10 +92,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/loginfunction/models.py">
+        <entry file="file://$PROJECT_DIR$/loginfunction/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+            <state relative-caret-position="420">
+              <caret line="66" column="54" lean-forward="true" selection-start-line="66" selection-start-column="54" selection-end-line="66" selection-end-column="54" />
               <folding>
                 <element signature="e#24#63#0" expanded="true" />
               </folding>
@@ -201,26 +104,45 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/loginfunction/forms.py">
+        <entry file="file://$PROJECT_DIR$/loginfunction/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+            <state relative-caret-position="241">
+              <caret line="80" column="22" lean-forward="true" selection-start-line="80" selection-start-column="22" selection-end-line="80" selection-end-column="22" />
+              <folding>
+                <element signature="e#24#63#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/loginfunction/apps.py">
+        <entry file="file://$PROJECT_DIR$/loginfunction/static/tables.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+            <state relative-caret-position="134">
+              <caret line="233" column="5" lean-forward="true" selection-start-line="233" selection-start-column="5" selection-end-line="722" selection-end-column="10" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/loginfunction/templates/tables.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-193">
+              <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/loginfunction/admin.py">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/loginfunction/templates/table1.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="167">
+              <caret line="35" column="14" lean-forward="true" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -284,13 +206,8 @@
         <option value="$PROJECT_DIR$/static/vendor/bootstrap/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/static/js/sb-admin-charts.js" />
         <option value="$PROJECT_DIR$/static/js/sb-admin-charts.min.js" />
-        <option value="$PROJECT_DIR$/loginfunction/models.py" />
         <option value="$PROJECT_DIR$/loginfunction/apps.py" />
-        <option value="$PROJECT_DIR$/loginfunction/forms.py" />
         <option value="$PROJECT_DIR$/loginfunction/templates/register.html" />
-        <option value="$PROJECT_DIR$/loginfunction/urls.py" />
-        <option value="$PROJECT_DIR$/loginfunction/views.py" />
-        <option value="$PROJECT_DIR$/loginfunction/templates/login.html" />
         <option value="$PROJECT_DIR$/loginfunction/migrations/model.html" />
         <option value="$PROJECT_DIR$/static/index.html" />
         <option value="$PROJECT_DIR$/loginfunction/templates/model.html" />
@@ -298,14 +215,21 @@
         <option value="$PROJECT_DIR$/loginfunction/templates/chart2.html" />
         <option value="$PROJECT_DIR$/loginfunction/templates/chart3.html" />
         <option value="$PROJECT_DIR$/loginfunction/templates/tables1.html" />
-        <option value="$PROJECT_DIR$/loginfunction/templates/table1.html" />
         <option value="$PROJECT_DIR$/loginfunction/templates/logout_model.html" />
         <option value="$PROJECT_DIR$/loginfunction/templates/index.html" />
         <option value="$PROJECT_DIR$/loginfunction/templates/charts.html" />
         <option value="$PROJECT_DIR$/loginfunction/templates/tables.html" />
-        <option value="$PROJECT_DIR$/web/urls.py" />
-        <option value="$PROJECT_DIR$/web/settings.py" />
         <option value="$PROJECT_DIR$/web/wsgi.py" />
+        <option value="$PROJECT_DIR$/web/settings.py" />
+        <option value="$PROJECT_DIR$/loginfunction/templates/login.html" />
+        <option value="$PROJECT_DIR$/loginfunction/urls.py" />
+        <option value="$PROJECT_DIR$/web/urls.py" />
+        <option value="$PROJECT_DIR$/loginfunction/static/js/sb-admin-charts.min.js" />
+        <option value="$PROJECT_DIR$/loginfunction/forms.py" />
+        <option value="$PROJECT_DIR$/loginfunction/models.py" />
+        <option value="$PROJECT_DIR$/loginfunction/static/tables.html" />
+        <option value="$PROJECT_DIR$/loginfunction/views.py" />
+        <option value="$PROJECT_DIR$/loginfunction/templates/table1.html" />
       </list>
     </option>
   </component>
@@ -314,10 +238,10 @@
       <facet id="web/invalid/Django" />
     </ignored-facets>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="y" value="32" />
-    <option name="width" value="1920" />
-    <option name="height" value="982" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="18" />
+    <option name="width" value="1386" />
+    <option name="height" value="788" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -361,25 +285,26 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="E:/test1/PublicLocationTrafficMonitoring/Web" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/loginfunction/templates" />
-      <recent name="F:\My\rjb\PublicLocationTrafficMonitoring\web\loginfunction\templates" />
-      <recent name="F:\My\rjb\PublicLocationTrafficMonitoring\web" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/loginfunction" />
       <recent name="$PROJECT_DIR$/loginfunction/templates" />
       <recent name="F:\My\rjb\PublicLocationTrafficMonitoring\web\static" />
       <recent name="F:\My\rjb\PublicLocationTrafficMonitoring\web\loginfunction\templates" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Django\PublicLocationTrafficMonitoring\Web\loginfunction" />
+      <recent name="$PROJECT_DIR$/loginfunction/templates" />
+      <recent name="F:\My\rjb\PublicLocationTrafficMonitoring\web\loginfunction\templates" />
+      <recent name="F:\My\rjb\PublicLocationTrafficMonitoring\web" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -453,11 +378,12 @@
       <workItem from="1558068167793" duration="5935000" />
       <workItem from="1558221861961" duration="434000" />
       <workItem from="1558441071236" duration="288000" />
+      <workItem from="1558595488531" duration="17910000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69458000" />
+    <option name="totallyTimeSpent" value="87368000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -469,10 +395,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="32" width="1920" height="982" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49914822" visible="true" weight="0.14049146" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49914822" visible="true" weight="0.21028744" />
       <window_info id="Structure" order="1" sideWeight="0.5008518" side_tool="true" weight="0.15384616" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -486,8 +411,8 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3266745" />
       <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32769832" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3266745" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32960895" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3262295" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.3295082" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.32899868" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -564,52 +489,8 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://a8a03b96-6326-42bc-866d-36071475089d/schema/web_project/table/auth_user_groups">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="464e8fb6-6d83-442b-ac1b-4edf2a6b020e">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a8a03b96-6326-42bc-866d-36071475089d/schema/web_project/table/django_admin_log">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="464e8fb6-6d83-442b-ac1b-4edf2a6b020e">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/python36/lib/python2.7/gettext.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="474" selection-start-line="474" selection-end-line="474" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/python36/lib/python2.7/site-packages/django/forms/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="80" selection-start-line="80" selection-end-line="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/python36/lib/python2.7/site-packages/django/utils/translation/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="84" selection-start-line="84" selection-end-line="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/python36/lib/python2.7/site-packages/django/utils/translation/trans_real.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="322" selection-start-line="322" selection-end-line="322" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/envs/python36/lib/python2.7/site-packages/django/utils/translation/__init__.py" />
+    <entry file="file://$USER_HOME$/anaconda3/envs/python36/lib/python2.7/site-packages/django/utils/translation/trans_real.py" />
     <entry file="file://$PROJECT_DIR$/loginfunction/static/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="770">
@@ -617,40 +498,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loginfunction/migrations/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loginfunction/migrations/0001_initial.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="e#71#110#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/python36/lib/python2.7/site-packages/django/forms/fields.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="218" selection-start-line="218" selection-end-line="218" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/python36/lib/python2.7/site-packages/django/forms/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="272" selection-start-line="272" selection-end-line="272" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/python36/lib/python2.7/site-packages/django/core/handlers/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="128" selection-start-line="128" selection-end-line="128" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/envs/python36/lib/python2.7/site-packages/django/forms/fields.py" />
+    <entry file="file://$USER_HOME$/anaconda3/envs/python36/lib/python2.7/site-packages/django/forms/models.py" />
+    <entry file="file://$USER_HOME$/anaconda3/envs/python36/lib/python2.7/site-packages/django/core/handlers/wsgi.py" />
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/2/__builtin__.pyi">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2479">
@@ -658,15 +508,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://a8a03b96-6326-42bc-866d-36071475089d/schema/web_project/table/auth_user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="6a19d87f-045e-49af-b74b-7bad4326a454">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://a8a03b96-6326-42bc-866d-36071475089d/schema/web_project/table/auth_user" />
     <entry file="file://$PROJECT_DIR$/loginfunction/static/register.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
@@ -674,48 +516,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/python36/lib/python2.7/site-packages/django/core/handlers/exception.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="85" selection-start-line="85" selection-end-line="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/python36/lib/python2.7/site-packages/django/core/handlers/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="186" selection-start-line="186" selection-end-line="186" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/python36/lib/python2.7/site-packages/django/dispatch/dispatcher.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="733">
-          <caret line="187" selection-start-line="187" selection-end-line="187" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/python36/lib/python2.7/site-packages/django/shortcuts.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="40" column="50" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/python36/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1415">
-          <caret line="100" selection-start-line="100" selection-end-line="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/python36/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2001">
-          <caret line="180" selection-start-line="180" selection-end-line="180" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/envs/python36/lib/python2.7/site-packages/django/core/handlers/exception.py" />
+    <entry file="file://$USER_HOME$/anaconda3/envs/python36/lib/python2.7/site-packages/django/core/handlers/base.py" />
+    <entry file="file://$USER_HOME$/anaconda3/envs/python36/lib/python2.7/site-packages/django/dispatch/dispatcher.py" />
+    <entry file="file://$USER_HOME$/anaconda3/envs/python36/lib/python2.7/site-packages/django/shortcuts.py" />
+    <entry file="file://$USER_HOME$/anaconda3/envs/python36/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py" />
+    <entry file="file://$USER_HOME$/anaconda3/envs/python36/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py" />
     <entry file="file://$PROJECT_DIR$/loginfunction/static/vendor/bootstrap/css/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="167">
@@ -750,13 +556,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loginfunction/static/tables.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/loginfunction/static/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-132">
@@ -771,41 +570,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loginfunction/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="45" column="4" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
-          <folding>
-            <element signature="e#24#63#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loginfunction/templates/logout_model.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loginfunction/templates/table1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="477" column="44" lean-forward="true" selection-start-line="477" selection-start-column="44" selection-end-line="477" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/loginfunction/templates/chart3.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
           <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loginfunction/templates/chart1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -816,61 +584,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loginfunction/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-127">
-          <caret line="14" column="89" selection-start-line="14" selection-start-column="74" selection-end-line="14" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loginfunction/templates/tables.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loginfunction/templates/charts.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="24" column="31" lean-forward="true" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loginfunction/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2068">
-          <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/loginfunction/static/vendor/font-awesome/css/font-awesome.min.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/loginfunction/static/css/sb-admin.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/python36/lib/python2.7/site-packages/django/core/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loginfunction/templates/model.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="64" selection-start-line="12" selection-start-column="64" selection-end-line="12" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/envs/python36/lib/python2.7/site-packages/django/core/wsgi.py" />
     <entry file="file://$PROJECT_DIR$/loginfunction/templates/register.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
@@ -878,32 +598,125 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/urls.py">
+    <entry file="file://$PROJECT_DIR$/loginfunction/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="26" column="49" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
-          <folding>
-            <element signature="e#637#677#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="180">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+        <state relative-caret-position="210">
+          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
           <folding>
             <element signature="e#220#229#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loginfunction/urls.py">
+    <entry file="file://$PROJECT_DIR$/loginfunction/static/js/sb-admin-charts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
+        <state relative-caret-position="240">
+          <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loginfunction/migrations/0002_data_security_staff.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loginfunction/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1033">
+          <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loginfunction/static/js/sb-admin-datatables.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="3" lean-forward="true" selection-start-column="3" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loginfunction/migrations/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="678">
+          <caret line="80" column="28" selection-start-line="80" selection-start-column="17" selection-end-line="80" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loginfunction/templates/logout_model.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loginfunction/templates/model.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="12" column="64" selection-start-line="12" selection-start-column="64" selection-end-line="12" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loginfunction/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="39" column="15" lean-forward="true" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loginfunction/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2640">
+          <caret line="88" column="54" selection-start-line="88" selection-start-column="54" selection-end-line="88" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loginfunction/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loginfunction/templates/charts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="30" column="34" lean-forward="true" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="28" column="22" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="22" />
+          <folding>
+            <element signature="e#637#677#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loginfunction/templates/chart1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loginfunction/static/js/sb-admin-charts.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-300">
+          <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -911,32 +724,69 @@
     <entry file="file://$PROJECT_DIR$/loginfunction/tests.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/loginfunction/models.py">
+    <entry file="file://$PROJECT_DIR$/loginfunction/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        <state relative-caret-position="180">
+          <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
           <folding>
-            <element signature="e#24#63#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/loginfunction/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+        <state relative-caret-position="750">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="e#16#40#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loginfunction/apps.py">
+    <entry file="file://$PROJECT_DIR$/loginfunction/templates/tables.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+        <state relative-caret-position="-193">
+          <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loginfunction/admin.py">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/loginfunction/static/tables.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="233" column="5" lean-forward="true" selection-start-line="233" selection-start-column="5" selection-end-line="722" selection-end-column="10" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loginfunction/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="80" column="22" lean-forward="true" selection-start-line="80" selection-start-column="22" selection-end-line="80" selection-end-column="22" />
+          <folding>
+            <element signature="e#24#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loginfunction/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="66" column="54" lean-forward="true" selection-start-line="66" selection-start-column="54" selection-end-line="66" selection-end-column="54" />
+          <folding>
+            <element signature="e#24#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loginfunction/templates/table1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="35" column="14" lean-forward="true" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
