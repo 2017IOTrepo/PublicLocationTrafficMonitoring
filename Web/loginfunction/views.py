@@ -47,8 +47,9 @@ def userlogin(request):
 
 
 def index(request):
-    return render(request, 'index.html')
-
+    persons = security_staff().selectall()
+    datas = [[person.name, person.location, person.p_number, person.weixin] for person in persons]
+    return render(request, 'index.html', context={'datas': datas})
 
 def charts(request):
    return render(request,"charts.html")
@@ -56,15 +57,8 @@ def charts(request):
 
 def tables(request):
     persons=security_staff().selectall()
-    str=""
-    for person in persons:
-        str+="<tr><td>"+person[0]+"</td>" \
-              "<td>"+person[1]+"</td>" \
-              "<td>"+person[2]+"</td>" \
-              "<td>"+person[3]+"</td>" \
-              "<td>"+person[4]+"</td>" \
-              "<td>"+person[5]+"</td></tr>"
-    return render(request, 'tables.html',{'data':str})
+    datas=[[person.name,person.location,person.p_number,person.weixin] for person in persons]
+    return render(request, 'tables.html',context={'datas':datas})
 
 
 # Create your views here.

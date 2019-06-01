@@ -2,8 +2,8 @@
 from __future__ import unicode_literals
 
 from django.db import models
-from django import forms
 from django.contrib.auth.models import User
+from django.forms.models import model_to_dict
 
 
 class user(models.Model):
@@ -71,14 +71,7 @@ class security_staff(models.Model):
     #显示人员的信息
     def  selectall(self):
         persons=security_staff.objects.all()
-        results=[[],[],[],[]]
-        i=0;
-        for person in persons:
-            results[0][i]=person.name
-            results[1][i]=person.location
-            results[2][i]=person.p_number
-            results[3][i]=person.weixin
-        return results
+        return persons
 
     #更改信息
     def upadteone(self,**info):
