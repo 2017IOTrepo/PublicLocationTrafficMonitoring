@@ -9,6 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>人流管理系统</title>
+   <script src="http://code.jquery.com/jquery-latest.js"></script>
     <!-- Bootstrap core CSS-->
     <link href={% static "vendor/bootstrap/css/bootstrap.min.css" %} rel="stylesheet">
     <!-- Custom fonts for this template-->
@@ -38,22 +39,104 @@
                         </div>
                         <a class="card-footer text-white small z-1 " href="#">
                             <span class="float-left ">当前状态:红色预警</span>
-                            </span>
                         </a>
                     </div>
 
                 </div>
             </div>
             <!-- Area Chart Example-->
-            {% include "chart1.html" %}
+           <div class="card mb-3">
+                <div class="card-header">
+                     <i class="fa fa-area-chart" ></i> 人流量历史记录
+                 </div>
+                 <div class="card-body">
+                    <canvas id="myAreaChart" width="100%" height="30" ></canvas>
+                </div>
+                <div class="card-footer small text-muted">更新时间： 11:59 PM</div>
+            </div>
+
             <div class="row">
-                {% include "chart2.html" %}
+
+               <div class="col-lg-8">
+                    <!-- Example Bar Chart Card-->
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <i class="fa fa-bar-chart"></i> Bar Chart Example
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-8 my-auto">
+                                    <canvas id="myBarChart" width="100" height="50"></canvas>
+                                </div>
+                                <div class="col-sm-4 text-center my-auto">
+                                    <div class="h4 mb-0 text-primary">$34,693</div>
+                                    <div class="small text-muted">YTD Revenue</div>
+                                    <hr>
+                                    <div class="h4 mb-0 text-warning">$18,474</div>
+                                    <div class="small text-muted">YTD Expenses</div>
+                                    <hr>
+                                    <div class="h4 mb-0 text-success">$16,219</div>
+                                    <div class="small text-muted">YTD Margin</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer small text-muted">更新于： 11:59 PM</div>
+                    </div>
+                </div>
             </div>
             <!-- /Card Columns-->
         </div>
-        {% include "chart3.html" %}
+
+        <div class="col-lg-4">
+            <div class="card mb-3">
+                <div class="card-header">
+                    <i class="fa fa-pie-chart"></i> Pie Chart Example
+                 </div>
+            <div class="card-body">
+                <canvas id="myPieChart" width="100%" height="100"></canvas>
+             </div>
+             <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+            </div>
+        </div>
+
         <!-- Example DataTables Card-->
-        {% include "table1.html" %}
+         <div class="card mb-3">
+            <div class="card-header">
+                <i class="fa fa-table"></i> Data Table Example
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Location</th>
+                            <th>Phone Number</th>
+                            <th>WeiChart</th>
+                        </tr>
+                        </thead>
+                        <tfoot>
+                        <tr>
+                            <th>Name</th>
+                            <th>Location</th>
+                            <th>Phone Number</th>
+                            <th>WeiChart</th>
+                        </tr>
+                        </tfoot>
+                        <tbody>
+                        {% for data in datas%}
+                            <tr>
+                           {% for i in data %}
+                               <td>{{ i }}</td>
+                           {% endfor %}
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+        </div>
     </div>
     <!-- /.container-fluid-->
     <!-- /.content-wrapper-->
