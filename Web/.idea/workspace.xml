@@ -196,7 +196,7 @@
       <facet id="web/invalid/Django" />
     </ignored-facets>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="676" />
     <option name="width" value="697" />
     <option name="height" value="735" />
@@ -328,12 +328,12 @@
       <workItem from="1558595488531" duration="17910000" />
       <workItem from="1559307431963" duration="2445000" />
       <workItem from="1559386135307" duration="7964000" />
-      <workItem from="1559441847254" duration="13753000" />
+      <workItem from="1559441847254" duration="14049000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111530000" />
+    <option name="totallyTimeSpent" value="111826000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -345,7 +345,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49635038" visible="true" weight="0.21406959" />
