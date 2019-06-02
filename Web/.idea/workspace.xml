@@ -4,16 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/web/urls.py" line="25" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d333e04-1318-4f31-beeb-b12e824029f5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loginfunction/static/js/sb-admin-charts.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/static/js/sb-admin-charts.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loginfunction/templates/chart1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/loginfunction/templates/chart2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/loginfunction/templates/chart3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/loginfunction/templates/charts.html" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/templates/charts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loginfunction/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loginfunction/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/loginfunction/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="4d333e04-1318-4f31-beeb-b12e824029f5" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -337,12 +328,12 @@
       <workItem from="1558595488531" duration="17910000" />
       <workItem from="1559307431963" duration="2445000" />
       <workItem from="1559386135307" duration="7964000" />
-      <workItem from="1559441847254" duration="13481000" />
+      <workItem from="1559441847254" duration="13753000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111258000" />
+    <option name="totallyTimeSpent" value="111530000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
