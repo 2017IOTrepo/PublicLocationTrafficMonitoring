@@ -85,9 +85,9 @@ def clean(request):
     return redirect("http://127.0.0.1:8000/login/")
 
 def part_flush(request):
-    results=data.objects.all()[:12]  # 在  前加一个负号，可以实现倒序
-    datas=[
-        [result.time for result in results],
-        [result.pedestrian_flow for result in results]
+    datas=data.objects.all()[:13]  # 在  前加一个负号，可以实现倒序
+    results=[
+        [data.time for data in datas],
+        [data.pedestrian_flow for data in datas]
            ]
-    return HttpResponse(json.dumps(datas), content_type='application/json')
+    return HttpResponse(json.dumps(results), content_type='application/json')
