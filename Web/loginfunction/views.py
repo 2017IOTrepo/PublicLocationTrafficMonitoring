@@ -27,9 +27,9 @@ def userlogin(request):
 
 
 def index(request):
-    data_count=human_traffic_count.objects.all().count()
+    data_count = human_traffic_count.objects.all().count()
     count = human_traffic_count.objects.get(id=data_count)
-    if (count > 0):
+    if count.count > 0:
         return render(request, 'index.html', {'count': count})
     else:
         return render(request, 'index.html')
@@ -42,8 +42,6 @@ def charts(request):
 def tables(request):
     return render(request, 'tables.html')
 
-
-# Create your views here.
 
 def register(request):
     if request.method == "POST":
