@@ -1,0 +1,37 @@
+<div class="card mb-3">
+            <div class="card-header">
+                <i class="fa fa-table"></i> 人流量历史记录表
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                         <tr>
+                            <th>姓名</th>
+                            <th>地点</th>
+                            <th>维护职员电话</th>
+                            <th>WeiChart</th>
+                        </tr>
+                        </thead>
+                        <tfoot>
+{#                        <tr>#}
+{#                            <th>Name</th>#}
+{#                            <th>Location</th>#}
+{#                            <th>Phone Number</th>#}
+{#                            <th>WeiChart</th>#}
+{#                        </tr>#}
+                        </tfoot>
+                        <tbody>
+                        {% for data in datas %}
+                            <tr>
+                           {% for i in data %}
+                               <td>{{ i }}</td>
+                           {% endfor %}
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+        </div>

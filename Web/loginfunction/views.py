@@ -1,11 +1,17 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
+
+import json
+
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
+from django.db import models
+from loginfunction.models import human_traffic_count, data, security_staff
 from .forms import RegistrationForm, LoginForm
 from django.contrib.auth import authenticate, login
-from django.http import HttpResponse
-from .models import data,security_staff
-import json
+
+from django.forms.models import model_to_dict
+
 
 # from django.http import HttpResponse
 
@@ -26,42 +32,30 @@ def userlogin(request):
                 return render(request, "login.html", {"message": message})
     return redirect('/login')
 
-    #     username = request.POST.get('username')
-    #     password = request.POST.get('password')
-    #     if username and password:  # 确保用户名和密码都不为空
-    #         username = username.strip()
-    #         # 用户名字符合法性验证
-    #         # 密码长度验证
-    #         # 更多的其它验证.....
-    #         try:
-    #             user = models.user.objects.get(userid=username)
-    #         except:
-    #             return render(request, 'login.html')
-    #         if user.password == password:
-    #             return redirect('/index/')  # 重定向
-    #         else:
-    #             message = "用户名或密码错误"
-    #             return render(request, 'login.html', {"message": message})
-    #     return redirect('/index/')
-    # return render(request, 'login.html')
-
 
 def index(request):
-    persons = security_staff().selectall()
-    datas = [[person.name, person.location, person.p_number, person.weixin] for person in persons]
-    return render(request, 'index.html', context={'datas': datas})
+
+    try:
+        count = data.objects.last()
+        persons = security_staff().selectall()
+        datas = [[person.name, person.location, person.p_number, person.weixin] for person in persons]
+    except:
+        return render(request, 'index.html')
+    if count.pedestrian_flow > 0 and datas != None:
+        return render(request, 'index.html', {'count': count, "datas": datas})
+    else:
+        return render(request, 'index.html', {"datas": datas})
+
 
 def charts(request):
    return render(request,"charts.html")
 
 
 def tables(request):
-    persons=security_staff().selectall()
-    datas=[[person.name,person.location,person.p_number,person.weixin] for person in persons]
-    return render(request, 'tables.html',context={'datas':datas})
+    persons = security_staff().selectall()
+    datas = [[person.name, person.location, person.p_number, person.weixin] for person in persons]
+    return render(request, 'tables.html', context={'datas': datas})
 
-
-# Create your views here.
 
 def register(request):
     if request.method == "POST":
@@ -90,4 +84,11 @@ def part_flush(request):
         [data.time for data in datas],
         [data.pedestrian_flow for data in datas]
            ]
+
+def part_flush(request):
+    datas = data.objects.all()[:13]  # 在  前加一个负号，可以实现倒序
+    results = [
+        [data.time for data in datas],
+        [data.pedestrian_flow for data in datas]
+    ]
     return HttpResponse(json.dumps(results), content_type='application/json')

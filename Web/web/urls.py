@@ -20,6 +20,8 @@ from django.conf import settings
 from loginfunction import views as login
 from loginfunction import urls as login_urls
 from loginfunction.views import part_flush
+from loginfunction.views import part_flush
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^login/', include((login_urls,'login'),namespace='login')),
