@@ -75,7 +75,7 @@ WSGI_APPLICATION = 'web.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'web',
+        'NAME': 'web_project',
         'USER': 'root',
         'PASSWORD': 'hades54524',
         'HOST': '127.0.0.1',
@@ -127,3 +127,4 @@ STATICFILES_DIRS = [
 SESSION_COOKIE_AGE = 30*60  # 30分钟
 SESSION_SAVE_EVERY_REQUEST = True
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+

@@ -1,10 +1,15 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-from django.shortcuts import render, redirect
 
-from loginfunction.models import human_traffic_count
+import json
+
+from django.http import HttpResponse
+from django.shortcuts import render, redirect
+from django.db import models
+from loginfunction.models import human_traffic_count, data, security_staff
 from .forms import RegistrationForm, LoginForm
 from django.contrib.auth import authenticate, login
+from django.forms.models import model_to_dict
 
 
 # from django.http import HttpResponse
@@ -27,12 +32,16 @@ def userlogin(request):
 
 
 def index(request):
-    data_count = human_traffic_count.objects.all().count()
-    count = human_traffic_count.objects.get(id=data_count)
-    if count.count > 0:
-        return render(request, 'index.html', {'count': count})
-    else:
+    try:
+        count = data.objects.last()
+        persons = security_staff().selectall()
+        datas = [[person.name, person.location, person.p_number, person.weixin] for person in persons]
+    except:
         return render(request, 'index.html')
+    if count.pedestrian_flow > 0 and datas != None:
+        return render(request, 'index.html', {'count': count, "datas": datas})
+    else:
+        return render(request, 'index.html', {"datas": datas})
 
 
 def charts(request):
@@ -40,7 +49,9 @@ def charts(request):
 
 
 def tables(request):
-    return render(request, 'tables.html')
+    persons = security_staff().selectall()
+    datas = [[person.name, person.location, person.p_number, person.weixin] for person in persons]
+    return render(request, 'tables.html', context={'datas': datas})
 
 
 def register(request):
@@ -63,3 +74,12 @@ def register(request):
 def clean(request):
     request.session.flush()
     return redirect("http://127.0.0.1:8000/login/")
+
+
+def part_flush(request):
+    datas = data.objects.all()[:13]  # 在  前加一个负号，可以实现倒序
+    results = [
+        [data.time for data in datas],
+        [data.pedestrian_flow for data in datas]
+    ]
+    return HttpResponse(json.dumps(results), content_type='application/json')
