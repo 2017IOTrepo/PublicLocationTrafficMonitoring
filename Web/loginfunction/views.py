@@ -9,7 +9,7 @@ from django.db import models
 from loginfunction.models import human_traffic_count, data, security_staff
 from .forms import RegistrationForm, LoginForm
 from django.contrib.auth import authenticate, login
-
+import time
 from django.forms.models import model_to_dict
 
 
@@ -34,9 +34,10 @@ def userlogin(request):
 
 
 def index(request):
-
     try:
-        count = data.objects.last()
+        counts = data.objects.order_by('-id')[:1]
+        count = counts[0]
+        print(count.time)
         persons = security_staff().selectall()
         datas = [[person.name, person.location, person.p_number, person.weixin] for person in persons]
     except:
@@ -45,7 +46,6 @@ def index(request):
         return render(request, 'index.html', {'count': count, "datas": datas})
     else:
         return render(request, 'index.html', {"datas": datas})
-
 
 def charts(request):
    return render(request,"charts.html")
@@ -78,17 +78,15 @@ def clean(request):
     request.session.flush()
     return redirect("http://127.0.0.1:8000/login/")
 
-def part_flush(request):
-    datas=data.objects.all()[:13]  # 在  前加一个负号，可以实现倒序
-    results=[
-        [data.time for data in datas],
-        [data.pedestrian_flow for data in datas]
-           ]
 
 def part_flush(request):
-    datas = data.objects.all()[:13]  # 在  前加一个负号，可以实现倒序
+    if data().insert_data():
+        print("True")
+    else:
+        print("False")
+    datas = data.objects.all()[:1]  # 在  前加一个负号，可以实现倒序
     results = [
-        [data.time for data in datas],
-        [data.pedestrian_flow for data in datas]
+        datas[0].time,
+        datas[0].pedestrian_flow
     ]
     return HttpResponse(json.dumps(results), content_type='application/json')

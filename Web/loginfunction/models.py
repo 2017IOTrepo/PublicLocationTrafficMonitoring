@@ -4,6 +4,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.forms.models import model_to_dict
+import time
+import random
 
 
 class user(models.Model):
@@ -50,6 +52,20 @@ class data(models.Model):
         ordering = ['-id']
         verbose_name = '人流量'
         verbose_name_plural = '人流量'
+
+    def insert_data(self,**info):
+            info={'location':"餐厅",
+                  'pedestrian_flow':random.randint(0,40000),
+                  'is_overloading':1,
+                  'abnormal_video':None,
+                  'time':str(time.asctime(time.localtime(time.time())))}
+            if data.objects.get_or_create(location=info['location'],
+                                      pedestrian_flow=info['pedestrian_flow'],
+                                      is_overloading=info['is_overloading'],
+                                      abnormal_video=info['abnormal_video'],
+                                      time=info['time']):
+                return True
+            return False
 
 
 # 保安组织人员信息表
