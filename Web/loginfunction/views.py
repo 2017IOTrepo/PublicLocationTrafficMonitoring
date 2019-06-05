@@ -92,7 +92,7 @@ def register(request):
             new_user.save()
             message = "注册成功，请您进行登录"
             new_info = new_info_form.save(commit=False)
-            new_info.user=new_user
+            new_info.user = new_user
             new_info.save()
             return render(request, "register.html", {"message": message})
         else:
