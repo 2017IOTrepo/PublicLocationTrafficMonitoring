@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 import json
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
-from loginfunction.models import data, security_staff, ThresholdValue, user
+from loginfunction.models import data, ThresholdValue, user
 from .forms import RegistrationForm, LoginForm, Info_from
 from django.contrib.auth import authenticate, login
 
@@ -33,7 +33,7 @@ def index(request):
         counts = data.objects.order_by('-id')[:1]
         count = counts[0]
         print(count.time)
-        persons = security_staff().selectall()
+        persons = user().selectall()
         datas = [[person.name, person.local, person.phone, person.wechat] for person in persons]
         viewdata = data.objects.all().order_by("-time")[:14]
         context = [[i.time] for i in viewdata]
@@ -116,6 +116,7 @@ def part_flush(request):
     datas = data.objects.all()[:1]  # 在  前加一个负号，可以实现倒序
     results = [
         datas[0].time,
-        datas[0].pedestrian_flow
+        datas[0].pedestrian_flow,
+        datas[0].location
     ]
     return HttpResponse(json.dumps(results), content_type='application/json')
