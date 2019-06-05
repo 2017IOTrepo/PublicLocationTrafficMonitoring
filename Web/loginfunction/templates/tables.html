@@ -32,42 +32,10 @@
         </ol>
         <!-- Example DataTables Card-->
         <div class="card mb-3">
-            <div class="card-header">
-                <i class="fa fa-table"></i> Data Table Example
-            </div>
             <div class="card-body">
-                <div class="table-responsive">
-                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                        <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Location</th>
-                            <th>Phone Number</th>
-                            <th>WeiChart</th>
-                        </tr>
-                        </thead>
-                        <tfoot>
-                        <tr>
-                            <th>Name</th>
-                            <th>Location</th>
-                            <th>Phone Number</th>
-                            <th>WeiChart</th>
-                        </tr>
-                        </tfoot>
-                        <tbody>
-                        {% for data in datas%}
-                            <tr>
-                           {% for i in data %}
-                               <td>{{ i }}</td>
-                           {% endfor %}
-                            </tr>
-                        {% endfor %}
-                        </tbody>
-                    </table>
-                </div>
+                {% include "table1.html" %}
+
             </div>
-            <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
-        </div>
     </div>
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fa fa-angle-up"></i>

@@ -15,11 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import url,include
 from django.contrib import admin
-from django.views import static
-from django.conf import settings
 from loginfunction import views as login
 from loginfunction import urls as login_urls
-from loginfunction.views import part_flush
 from loginfunction.views import part_flush
 
 urlpatterns = [

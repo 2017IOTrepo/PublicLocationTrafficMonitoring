@@ -2,18 +2,12 @@
 from __future__ import unicode_literals
 
 import json
-
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
-from django.db import models
-from loginfunction.models import human_traffic_count, data, security_staff
-from .forms import RegistrationForm, LoginForm
+from loginfunction.models import data, security_staff, ThresholdValue, user
+from .forms import RegistrationForm, LoginForm, Info_from
 from django.contrib.auth import authenticate, login
-import time
-from django.forms.models import model_to_dict
 
-
-# from django.http import HttpResponse
 
 def userlogin(request):
     if request.method == "GET":
@@ -34,37 +28,72 @@ def userlogin(request):
 
 
 def index(request):
+    global json_data, json_data_time, json_data_data, current_count
     try:
         counts = data.objects.order_by('-id')[:1]
         count = counts[0]
         print(count.time)
         persons = security_staff().selectall()
-        datas = [[person.name, person.location, person.p_number, person.weixin] for person in persons]
+        datas = [[person.name, person.local, person.phone, person.wechat] for person in persons]
+        viewdata = data.objects.all().order_by("-time")[:14]
+        context = [[i.time] for i in viewdata]
+        context_2 = [[i.pedestrian_flow] for i in viewdata]
+        json_data_time = json.dumps(context)
+        json_data_data = json.dumps(context_2)
+        current_count = context_2[0][0]
+        current_time = context[0][0]
+        yuzhi = ThresholdValue.objects.get(id=1)
+        yuzhi_json_yellow = json.dumps(yuzhi.threshold_value_yellow)
+        yuzhi_json_normal = json.dumps(yuzhi.threshold_value_normal)
     except:
-        return render(request, 'index.html')
+        return render(request, 'index.html', {"json_data_time": json_data_time, "json_data_data": json_data_data,
+                                              "current_count": current_count, "current_time": current_time,
+                                              "yuzhi": yuzhi, "yuzhi_json_yellow": yuzhi_json_yellow,
+                                              "yuzhi_json_normal": yuzhi_json_normal})
     if count.pedestrian_flow > 0 and datas != None:
-        return render(request, 'index.html', {'count': count, "datas": datas})
+        return render(request, 'index.html', {'count': count, "datas": datas, "json_data_time": json_data_time,
+                                              "json_data_data": json_data_data, "current_count": current_count,
+                                              "current_time": current_time, "yuzhi": yuzhi,
+                                              "yuzhi_json_yellow": yuzhi_json_yellow,
+                                              "yuzhi_json_normal": yuzhi_json_normal})
     else:
-        return render(request, 'index.html', {"datas": datas})
+        return render(request, 'index.html',
+                      {"datas": datas, "json_data_time": json_data_time, "json_data_data": json_data_data,
+                       "current_count": current_count, "current_time": current_time, "yuzhi": yuzhi,
+                       "yuzhi_json_yellow": yuzhi_json_yellow, "yuzhi_json_normal": yuzhi_json_normal})
+
 
 def charts(request):
-   return render(request,"charts.html")
+    viewdata = data.objects.all().order_by("-time")[:13]
+    context = [[i.time] for i in viewdata]
+    context_2 = [[i.pedestrian_flow] for i in viewdata]
+    json_data_time = json.dumps(context)
+    json_data_data = json.dumps(context_2)
+    current_count = data.objects.all().order_by("-time")[:1]
+    current_time = context[0][0]
+    return render(request, "charts.html",
+                  {"json_data_time": json_data_time, "json_data_data": json_data_data, "current_count": current_count,
+                   "current_time": current_time})
 
 
 def tables(request):
-    persons = security_staff().selectall()
-    datas = [[person.name, person.location, person.p_number, person.weixin] for person in persons]
+    persons = user.objects.all()
+    datas = [[person.name, person.local, person.phone, person.wechat] for person in persons]
     return render(request, 'tables.html', context={'datas': datas})
 
 
 def register(request):
     if request.method == "POST":
         user_form = RegistrationForm(request.POST)
-        if user_form.is_valid():
+        new_info_form = Info_from(request.POST)
+        if user_form.is_valid() and new_info_form.is_valid():
             new_user = user_form.save(commit=False)
             new_user.set_password(user_form.cleaned_data["password"])
             new_user.save()
             message = "注册成功，请您进行登录"
+            new_info = new_info_form.save(commit=False)
+            new_info.user=new_user
+            new_info.save()
             return render(request, "register.html", {"message": message})
         else:
             message = "您的输入有误，请重新输入，请检查两次密码是否一致"
