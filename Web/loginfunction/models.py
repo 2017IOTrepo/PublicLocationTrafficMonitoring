@@ -19,7 +19,7 @@ class user(models.Model):
     c_time = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.name
+        return str(self.user.id)
 
     class Meta:
         ordering = ['c_time']

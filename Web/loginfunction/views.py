@@ -174,7 +174,7 @@ def register(request):
             new_info.save()
             return render(request, "register.html", {"message": message})
         else:
-            message = "您的输入有误，请重新输入，请检查两次密码是否一致"
+            message=user_form.errors
             return render(request, "register.html", {"message": message})
     else:
         user_form = RegistrationForm()
