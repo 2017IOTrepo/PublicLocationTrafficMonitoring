@@ -30,11 +30,10 @@ def userlogin(request):
 def index(request):
     global json_data, json_data_time, json_data_data, current_count
     try:
-        counts = data.objects.order_by('-id')[:1]
+        counts = data.objects.order_by('-id')
         count = counts[0]
-        print(count.time)
-        persons = user().selectall()
-        datas = [[person.name, person.local, person.phone, person.wechat] for person in persons]
+        #print(count.time)
+        datas = [[abnormal.time,abnormal.location,abnormal.pedestrian_flow,"已上传" if(abnormal.is_overloading) else "未上传"] for abnormal in counts]
         viewdata = data.objects.filter(location="餐厅").order_by("-time")[:13]
         viewdata_2 = data.objects.filter(location="宿舍").order_by("-time")[:13]
         viewdata_3 = data.objects.filter(location="图书馆").order_by("-time")[:13]
