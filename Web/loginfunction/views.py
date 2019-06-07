@@ -35,9 +35,23 @@ def index(request):
         print(count.time)
         persons = user().selectall()
         datas = [[person.name, person.local, person.phone, person.wechat] for person in persons]
-        viewdata = data.objects.all().order_by("-time")[:14]
+        viewdata = data.objects.filter(location="餐厅").order_by("-time")[:13]
+        viewdata_2 = data.objects.filter(location="宿舍").order_by("-time")[:13]
+        viewdata_3 = data.objects.filter(location="图书馆").order_by("-time")[:13]
         context = [[i.time] for i in viewdata]
         context_2 = [[i.pedestrian_flow] for i in viewdata]
+        context_canting = [[i.time] for i in viewdata]
+        context_canting_2 = [[i.pedestrian_flow] for i in viewdata]
+        context_sushe = [[i.time] for i in viewdata_2]
+        context_sushe_2 = [[i.pedestrian_flow] for i in viewdata_2]
+        context_tushuguan = [[i.time] for i in viewdata_3]
+        context_tushuguan_2 = [[i.pedestrian_flow] for i in viewdata_3]
+        json_data_time_1 = json.dumps(context_canting)
+        json_data_data_1 = json.dumps(context_canting_2)
+        json_data_time_2 = json.dumps(context_sushe)
+        json_data_data_2 = json.dumps(context_sushe_2)
+        json_data_time_3 = json.dumps(context_tushuguan)
+        json_data_data_3 = json.dumps(context_tushuguan_2)
         json_data_time = json.dumps(context)
         json_data_data = json.dumps(context_2)
         current_count = context_2[0][0]
@@ -46,21 +60,53 @@ def index(request):
         yuzhi_json_yellow = json.dumps(yuzhi.threshold_value_yellow)
         yuzhi_json_normal = json.dumps(yuzhi.threshold_value_normal)
     except:
-        return render(request, 'index.html', {"json_data_time": json_data_time, "json_data_data": json_data_data,
-                                              "current_count": current_count, "current_time": current_time,
-                                              "yuzhi": yuzhi, "yuzhi_json_yellow": yuzhi_json_yellow,
-                                              "yuzhi_json_normal": yuzhi_json_normal})
+        return render(request, 'index.html',
+                      {
+                          "json_data_time": json_data_time,
+                          "json_data_data": json_data_data,
+                          "json_data_data_1": json_data_data_1,
+                          "json_data_time_1": json_data_time_1,
+                          "json_data_data_2": json_data_data_2,
+                          "json_data_time_2": json_data_time_2,
+                          "json_data_data_3": json_data_data_3,
+                          "json_data_time_3": json_data_time_3,
+                          "current_count": current_count,
+                          "current_time": current_time,
+                          "yuzhi": yuzhi,
+                          "yuzhi_json_yellow": yuzhi_json_yellow,
+                          "yuzhi_json_normal": yuzhi_json_normal})
     if count.pedestrian_flow > 0 and datas != None:
-        return render(request, 'index.html', {'count': count, "datas": datas, "json_data_time": json_data_time,
-                                              "json_data_data": json_data_data, "current_count": current_count,
-                                              "current_time": current_time, "yuzhi": yuzhi,
+        return render(request, 'index.html', {'count': count,
+                                              "datas": datas,
+                                              "json_data_time": json_data_time,
+                                              "json_data_data": json_data_data,
+                                              "json_data_data_1": json_data_data_1,
+                                              "json_data_time_1": json_data_time_1,
+                                              "json_data_data_2": json_data_data_2,
+                                              "json_data_time_2": json_data_time_2,
+                                              "json_data_data_3": json_data_data_3,
+                                              "json_data_time_3": json_data_time_3,
+                                              "current_count": current_count,
+                                              "current_time": current_time,
+                                              "yuzhi": yuzhi,
                                               "yuzhi_json_yellow": yuzhi_json_yellow,
                                               "yuzhi_json_normal": yuzhi_json_normal})
     else:
         return render(request, 'index.html',
-                      {"datas": datas, "json_data_time": json_data_time, "json_data_data": json_data_data,
-                       "current_count": current_count, "current_time": current_time, "yuzhi": yuzhi,
-                       "yuzhi_json_yellow": yuzhi_json_yellow, "yuzhi_json_normal": yuzhi_json_normal})
+                      {"datas": datas,
+                       "json_data_time": json_data_time,
+                       "json_data_data": json_data_data,
+                       "json_data_data_1": json_data_data_1,
+                       "json_data_time_1": json_data_time_1,
+                       "json_data_data_2": json_data_data_2,
+                       "json_data_time_2": json_data_time_2,
+                       "json_data_data_3": json_data_data_3,
+                       "json_data_time_3": json_data_time_3,
+                       "current_count": current_count,
+                       "current_time": current_time,
+                       "yuzhi": yuzhi,
+                       "yuzhi_json_yellow": yuzhi_json_yellow,
+                       "yuzhi_json_normal": yuzhi_json_normal})
 
 
 def charts(request):
@@ -69,11 +115,43 @@ def charts(request):
     context_2 = [[i.pedestrian_flow] for i in viewdata]
     json_data_time = json.dumps(context)
     json_data_data = json.dumps(context_2)
+    viewdata = data.objects.filter(location="餐厅").order_by("-time")[:14]
+    viewdata_2 = data.objects.filter(location="宿舍").order_by("-time")[:14]
+    viewdata_3 = data.objects.filter(location="图书馆").order_by("-time")[:14]
+    context = [[i.time] for i in viewdata]
+    context_2 = [[i.pedestrian_flow] for i in viewdata]
+    context_canting = [[i.time] for i in viewdata]
+    context_canting_2 = [[i.pedestrian_flow] for i in viewdata]
+    context_sushe = [[i.time] for i in viewdata_2]
+    context_sushe_2 = [[i.pedestrian_flow] for i in viewdata_2]
+    context_tushuguan = [[i.time] for i in viewdata_3]
+    context_tushuguan_2 = [[i.pedestrian_flow] for i in viewdata_3]
+    json_data_time_1 = json.dumps(context_canting)
+    json_data_data_1 = json.dumps(context_canting_2)
+    json_data_time_2 = json.dumps(context_sushe)
+    json_data_data_2 = json.dumps(context_sushe_2)
+    json_data_time_3 = json.dumps(context_tushuguan)
+    json_data_data_3 = json.dumps(context_tushuguan_2)
     current_count = data.objects.all().order_by("-time")[:1]
     current_time = context[0][0]
+    yuzhi = ThresholdValue.objects.get(id=1)
+    yuzhi_json_yellow = json.dumps(yuzhi.threshold_value_yellow)
+    yuzhi_json_normal = json.dumps(yuzhi.threshold_value_normal)
     return render(request, "charts.html",
-                  {"json_data_time": json_data_time, "json_data_data": json_data_data, "current_count": current_count,
-                   "current_time": current_time})
+                  {"json_data_time": json_data_time,
+                   "json_data_data": json_data_data,
+                   "json_data_data_1": json_data_data_1,
+                   "json_data_time_1": json_data_time_1,
+                   "json_data_data_2": json_data_data_2,
+                   "json_data_time_2": json_data_time_2,
+                   "json_data_data_3": json_data_data_3,
+                   "json_data_time_3": json_data_time_3,
+                   "current_time": current_time,
+                   "current_count": current_count,
+                   "yuzhi": yuzhi,
+                   "yuzhi_json_yellow": yuzhi_json_yellow,
+                   "yuzhi_json_normal": yuzhi_json_normal
+                   })
 
 
 def tables(request):

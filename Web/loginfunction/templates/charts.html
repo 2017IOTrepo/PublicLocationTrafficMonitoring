@@ -112,7 +112,7 @@
                 labels: labels,
                 datasets: [
                     {
-                        label: "Sessions",
+                        label: "餐厅",
                         lineTension: .3,
                         backgroundColor: "rgba(2,117,216,0.2)",
                         borderColor: "rgba(2,117,216,1)",
@@ -124,6 +124,34 @@
                         pointHitRadius: 20,
                         pointBorderWidth: 2,
                         data: data
+                    },
+                    {
+                        label: "宿舍",
+                        lineTension: .3,
+                        backgroundColor: "rgba(0,0,0,0.2)",
+                        borderColor: "rgba(0,0,0,1)",
+                        pointRadius: 5,
+                        pointBackgroundColor: "rgba(0,0,0,1)",
+                        pointBorderColor: "rgba(255,255,255,0.8)",
+                        pointHoverRadius: 5,
+                        pointHoverBackgroundColor: "rgba(0,0,0,1)",
+                        pointHitRadius: 20,
+                        pointBorderWidth: 2,
+                        data: {{ json_data_data_2|safe }}
+                    },
+                    {
+                        label: "其他",
+                        lineTension: .3,
+                        backgroundColor: "rgba(255,0,0,0.2)",
+                        borderColor: "rgba(255,0,0,1)",
+                        pointRadius: 5,
+                        pointBackgroundColor: "rgba(255,0,0,1)",
+                        pointBorderColor: "rgba(255,255,255,0.8)",
+                        pointHoverRadius: 5,
+                        pointHoverBackgroundColor: "rgba(255,0,0,1)",
+                        pointHitRadius: 20,
+                        pointBorderWidth: 2,
+                        data: {{ json_data_data_3|safe }}
                     }
                 ]
             },
@@ -154,19 +182,29 @@
                 var s = 0;
                 k = data[0];
                 s = data[1];
+                l=data[2];
                 myLineChart.data.labels.pop();
                 myLineChart.data.labels.unshift(k);
-                myLineChart.data.datasets[0].data.pop();
-                myLineChart.data.datasets[0].data.unshift(s);
+                if(l=="餐厅") {
+                    myLineChart.data.datasets[0].data.pop();
+                    myLineChart.data.datasets[0].data.unshift(s);
+                }else if(l=="宿舍"){
+                    myLineChart.data.datasets[1].data.pop();
+                    myLineChart.data.datasets[1].data.unshift(s);
+                }else{
+                     myLineChart.data.datasets[2].data.pop();
+                     myLineChart.data.datasets[2].data.unshift(s);
+                }
                 myLineChart.update();
                 console.log("更新时间:" + k);
                 console.log("当前人流量:" + s.toString() + "人次");
+                console.log(l);
                 var color = "";
                 var text = "";
-                if (s > 10000) {
+                if (s > {{ yuzhi_json_yellow }}) {
                     color = red;
                     text = redtext;
-                } else if (s < 10000 && s >= 500) {
+                } else if (s < {{ yuzhi_json_yellow }} && s >= {{ yuzhi_json_normal }}) {
                     color = yellow;
                     text = yellowtext;
                 } else {
@@ -176,13 +214,13 @@
                 document.getElementById("icon_cards").className = "card text-white " + color + " o-hidden h-100 w-100";
                 document.getElementById("sos").innerHTML = "当前状态:" + text;
                 document.getElementById("update_time").innerHTML = "更新时间:" + k;
-                document.getElementById("update_flow").innerHTML = "当前人流量:" + s.toString() + "人次";
+                document.getElementById("update_flow").innerHTML = l+"当前人流量:" + s.toString() + "人次";
             },
             error: function () {
                 error("获取数据错误");
             }
         })
-    }, 50000);
+    }, 5000);
 
     ctx = document.getElementById("myBarChart");
     myBarChart = new Chart(ctx,
