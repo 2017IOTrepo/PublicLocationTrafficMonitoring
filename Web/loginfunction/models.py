@@ -6,10 +6,11 @@ from django.contrib.auth.models import User
 from django.forms.models import model_to_dict
 import time
 import random
+from random import choice
 
 
 class user(models.Model):
-    user = models.OneToOneField(User, unique=True)
+    user = models.OneToOneField(User, unique=True,on_delete=models.CASCADE)
     email = models.EmailField(unique=True)
     name = models.CharField(max_length=50, null=True)
     local = models.CharField(max_length=50, null=True)
@@ -24,6 +25,35 @@ class user(models.Model):
         ordering = ['c_time']
         verbose_name = u'用户'
         verbose_name_plural = u'用户'
+
+
+    # 创建新的人物
+    def insertone(self, **info):
+        if user.objects.get_or_create(name=info['name'],
+                                                location=info['location'],
+                                                p_number=info['p_number'],
+                                                weixin=info['weixin']):
+            return True
+        return False
+
+    # 删除人物信息
+    def deleteone(self, name):
+        if user.objects.filter(name__contains=name).delete():
+            return True
+        return False
+
+    # 显示人员的信息
+    def selectall(self):
+        persons = user.objects.all()
+        return persons
+
+    # 更改信息
+    def upadteone(self, **info):
+        one = user.objects.get(info['name'])
+        one.location = info['location']
+        one.p_number = info['p_number']
+        one.weixin = info['weixin']
+        one.save()
 
 
 class ThresholdValue(models.Model):
@@ -55,7 +85,7 @@ class data(models.Model):
         verbose_name_plural = '人流量'
 
     def insert_data(self, **info):
-        info = {'location': "餐厅",
+        info = {'location': choice(["餐厅","宿舍","图书馆"]),
                 'pedestrian_flow': random.randint(0, 40000),
                 'is_overloading': 1,
                 'abnormal_video': None,
@@ -69,46 +99,3 @@ class data(models.Model):
         return False
 
 
-# 保安组织人员信息表
-class security_staff(models.Model):
-    name = models.CharField(u'姓名', max_length=50, null=True)  # 名字
-    location = models.CharField(u'位置', max_length=50)  # 所在地点
-    p_number = models.CharField(u'联系方式', max_length=50)  # 电话号
-    weixin = models.CharField(u'微信', max_length=50, null=True)  # 微信号
-
-    class Meta:
-        db_table = 'security_staff'
-        ordering = ['id']
-        verbose_name = '安保人员'
-        verbose_name_plural = '安保人员'
-
-    def __str__(self):
-        return self.name
-
-    # 创建新的人物
-    def insertone(self, **info):
-        if security_staff.objects.get_or_create(name=info['name'],
-                                                location=info['location'],
-                                                p_number=info['p_number'],
-                                                weixin=info['weixin']):
-            return True
-        return False
-
-    # 删除人物信息
-    def deleteone(self, name):
-        if security_staff.objects.filter(name__contains=name).delete():
-            return True
-        return False
-
-    # 显示人员的信息
-    def selectall(self):
-        persons = user.objects.all()
-        return persons
-
-    # 更改信息
-    def upadteone(self, **info):
-        one = security_staff.objects.get(info['name'])
-        one.location = info['location']
-        one.p_number = info['p_number']
-        one.weixin = info['weixin']
-        one.save()
