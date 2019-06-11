@@ -34,9 +34,9 @@ def index(request):
         count = counts[0]
         #print(count.time)
         datas = [[abnormal.time,abnormal.location,abnormal.pedestrian_flow,"已上传" if(abnormal.is_overloading) else "未上传"] for abnormal in counts]
-        viewdata = data.objects.filter(location="餐厅").order_by("-time")[:13]
-        viewdata_2 = data.objects.filter(location="宿舍").order_by("-time")[:13]
-        viewdata_3 = data.objects.filter(location="图书馆").order_by("-time")[:13]
+        viewdata = data.objects.filter(location="餐厅").order_by("-id")[:13]
+        viewdata_2 = data.objects.filter(location="宿舍").order_by("-id")[:13]
+        viewdata_3 = data.objects.filter(location="图书馆").order_by("-id")[:13]
         context = [[i.time] for i in viewdata]
         context_2 = [[i.pedestrian_flow] for i in viewdata]
         context_canting = [[i.time] for i in viewdata]
@@ -114,9 +114,9 @@ def charts(request):
     context_2 = [[i.pedestrian_flow] for i in viewdata]
     json_data_time = json.dumps(context)
     json_data_data = json.dumps(context_2)
-    viewdata = data.objects.filter(location="餐厅").order_by("-time")[:14]
-    viewdata_2 = data.objects.filter(location="宿舍").order_by("-time")[:14]
-    viewdata_3 = data.objects.filter(location="图书馆").order_by("-time")[:14]
+    viewdata = data.objects.filter(location="餐厅").order_by("-id")[:13]
+    viewdata_2 = data.objects.filter(location="宿舍").order_by("-id")[:13]
+    viewdata_3 = data.objects.filter(location="图书馆").order_by("-id")[:13]
     context = [[i.time] for i in viewdata]
     context_2 = [[i.pedestrian_flow] for i in viewdata]
     context_canting = [[i.time] for i in viewdata]
@@ -131,7 +131,7 @@ def charts(request):
     json_data_data_2 = json.dumps(context_sushe_2)
     json_data_time_3 = json.dumps(context_tushuguan)
     json_data_data_3 = json.dumps(context_tushuguan_2)
-    current_count = data.objects.all().order_by("-time")[:1]
+    current_count = context_2[0][0]
     current_time = context[0][0]
     yuzhi = ThresholdValue.objects.get(id=1)
     yuzhi_json_yellow = json.dumps(yuzhi.threshold_value_yellow)
