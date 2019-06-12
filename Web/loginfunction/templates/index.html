@@ -25,14 +25,14 @@
     {% include "model.html" %}
     <div class="content-wrapper">
     <div class="container-fluid">
-        <!-- Breadcrumbs-->
-        <div class="card-header">
-            <i class="fa fa-newspaper-o"> </i>
-            当前人流信息:
-        </div>
-        <!-- Icon Cards-->
-        <div class="row">
-            {% if current_count > yuzhi.threshold_value_yellow %}
+    <!-- Breadcrumbs-->
+    <div class="card-header">
+        <i class="fa fa-newspaper-o"> </i>
+        当前人流信息:
+    </div>
+    <!-- Icon Cards-->
+    <div class="row">
+        {% if current_count > yuzhi.threshold_value_yellow %}
             <div class="col-xl-12 mb-3 h-100 w-100">
                 <div class="card text-white bg-danger o-hidden h-100 w-100" id="icon_cards">
                     <div class="card-body">
@@ -42,9 +42,9 @@
                         <span class="float-left " id="sos">当前状态:红色预警</span>
                     </a>
                 </div>
-            <div class="card-footer small text-muted">更新时间:{{ current_time }}</div>
+                <div class="card-footer small text-muted">更新时间:{{ current_time }}</div>
             </div>
-            {% elif current_count > yuzhi.threshold_value_normal  %}
+        {% elif current_count > yuzhi.threshold_value_normal %}
             <div class="col-xl-12 mb-3 h-100 w-100">
                 <div class="card text-white bg-warning o-hidden h-100 w-100" id="icon_cards">
                     <div class="card-body">
@@ -54,9 +54,9 @@
                         <span class="float-left " id="sos">当前状态:黄色预警</span>
                     </a>
                 </div>
-            <div class="card-footer small text-muted">更新时间:{{ current_time }}</div>
+                <div class="card-footer small text-muted">更新时间:{{ current_time }}</div>
             </div>
-            {% else%}
+        {% else %}
             <div class="col-xl-12 mb-3 h-100 w-100">
                 <div class="card text-white bg-w o-hidden h-100 w-100" id="icon_cards">
                     <div class="card-body">
@@ -67,33 +67,23 @@
                     </a>
 
                 </div>
-            <div class="card-footer small text-muted">更新时间:{{ current_time }}</div>
+                <div class="card-footer small text-muted">更新时间:{{ current_time }}</div>
             </div>
-                {% endif %}
-        </div>
-
-        <!-- Area Chart Example-->
-        <div class="card mb-3">
-            <div class="card-header">
-                <i class="fa fa-area-chart"></i> 人流量历史记录
-            </div>
-            <div class="card-body">
-                <canvas id="myAreaChart" width="100%" height="30"></canvas>
-            </div>
-            <div class="card-footer small text-muted" id="update_time">更新时间:{{ current_time }}</div>
-
-        </div>
-
-        <div class="row">
-            <div class="col-lg-8">
-                <!-- Example Bar Chart Card-->
-                <div class="card mb-3">
-                    {% include "chart2.html" %}
-                    <div class="card-footer small text-muted">更新时间:{{ current_time }}</div>
-                </div>
-            </div>
-        <!-- /Card Columns-->
+        {% endif %}
     </div>
+
+    <!-- Area Chart Example-->
+    <div class="card mb-3">
+        <div class="card-header">
+            <i class="fa fa-area-chart"></i> 人流量历史记录
+        </div>
+        <div class="card-body">
+            <canvas id="myAreaChart" width="100%" height="30"></canvas>
+        </div>
+        <div class="card-footer small text-muted" id="update_time">更新时间:{{ current_time }}</div>
+
+    </div>
+
 
     <!-- Example DataTables Card-->
     <div class="card mb-3">
@@ -232,18 +222,18 @@
                 var s = 0;
                 k = data[0];
                 s = data[1];
-                l=data[2];
+                l = data[2];
                 myLineChart.data.labels.pop();
                 myLineChart.data.labels.unshift(k);
-                if(l=="餐厅") {
+                if (l == "餐厅") {
                     myLineChart.data.datasets[0].data.pop();
                     myLineChart.data.datasets[0].data.unshift(s);
-                }else if(l=="宿舍"){
+                } else if (l == "宿舍") {
                     myLineChart.data.datasets[1].data.pop();
                     myLineChart.data.datasets[1].data.unshift(s);
-                }else{
-                     myLineChart.data.datasets[2].data.pop();
-                     myLineChart.data.datasets[2].data.unshift(s);
+                } else {
+                    myLineChart.data.datasets[2].data.pop();
+                    myLineChart.data.datasets[2].data.unshift(s);
                 }
                 myLineChart.update();
                 console.log("更新时间:" + k);
@@ -264,7 +254,7 @@
                 document.getElementById("icon_cards").className = "card text-white " + color + " o-hidden h-100 w-100";
                 document.getElementById("sos").innerHTML = "当前状态:" + text;
                 document.getElementById("update_time").innerHTML = "更新时间:" + k;
-                document.getElementById("update_flow").innerHTML = l+"当前人流量:" + s.toString() + "人次";
+                document.getElementById("update_flow").innerHTML = l + "当前人流量:" + s.toString() + "人次";
             },
             error: function () {
                 error("获取数据错误");
