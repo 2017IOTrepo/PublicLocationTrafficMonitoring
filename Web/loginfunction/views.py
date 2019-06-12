@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+import datetime
 import json
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
@@ -32,8 +33,10 @@ def index(request):
     try:
         counts = data.objects.order_by('-id')
         count = counts[0]
-        #print(count.time)
-        datas = [[abnormal.time,abnormal.location,abnormal.pedestrian_flow,"已上传" if(abnormal.is_overloading) else "未上传"] for abnormal in counts]
+        # print(count.time)
+        datas = [
+            [abnormal.time, abnormal.location, abnormal.pedestrian_flow, "已上传" if (abnormal.is_overloading) else "未上传"]
+            for abnormal in counts]
         viewdata = data.objects.filter(location="餐厅").order_by("-id")[:13]
         viewdata_2 = data.objects.filter(location="宿舍").order_by("-id")[:13]
         viewdata_3 = data.objects.filter(location="图书馆").order_by("-id")[:13]
@@ -58,6 +61,30 @@ def index(request):
         yuzhi = ThresholdValue.objects.get(id=1)
         yuzhi_json_yellow = json.dumps(yuzhi.threshold_value_yellow)
         yuzhi_json_normal = json.dumps(yuzhi.threshold_value_normal)
+        # 下面为charts2的时间以及数据
+        d = datetime.datetime.now()
+        d1 = d - datetime.timedelta(days=1)
+        d2 = d - datetime.timedelta(days=2)
+        d3 = d - datetime.timedelta(days=3)
+        d4 = d - datetime.timedelta(days=4)
+        d5 = d - datetime.timedelta(days=5)
+        d6 = d - datetime.timedelta(days=6)
+        day = str(d.strftime("%m-%d"))
+        day1 = str(d1.strftime("%m-%d"))
+        day2 = str(d2.strftime("%m-%d"))
+        day3 = str(d3.strftime("%m-%d"))
+        day4 = str(d4.strftime("%m-%d"))
+        day5 = str(d5.strftime("%m-%d"))
+        day6 = str(d6.strftime("%m-%d"))
+        a = []
+        a.append(day6)
+        a.append(day5)
+        a.append(day4)
+        a.append(day3)
+        a.append(day2)
+        a.append(day1)
+        a.append(day)
+        json_data_date = json.dumps(a)
     except:
         return render(request, 'index.html',
                       {
@@ -73,7 +100,9 @@ def index(request):
                           "current_time": current_time,
                           "yuzhi": yuzhi,
                           "yuzhi_json_yellow": yuzhi_json_yellow,
-                          "yuzhi_json_normal": yuzhi_json_normal})
+                          "yuzhi_json_normal": yuzhi_json_normal,
+                          "json_data_date": json_data_date,
+                      })
     if count.pedestrian_flow > 0 and datas != None:
         return render(request, 'index.html', {'count': count,
                                               "datas": datas,
@@ -89,7 +118,9 @@ def index(request):
                                               "current_time": current_time,
                                               "yuzhi": yuzhi,
                                               "yuzhi_json_yellow": yuzhi_json_yellow,
-                                              "yuzhi_json_normal": yuzhi_json_normal})
+                                              "yuzhi_json_normal": yuzhi_json_normal,
+                                              "json_data_date": json_data_date,
+                                              })
     else:
         return render(request, 'index.html',
                       {"datas": datas,
@@ -105,7 +136,9 @@ def index(request):
                        "current_time": current_time,
                        "yuzhi": yuzhi,
                        "yuzhi_json_yellow": yuzhi_json_yellow,
-                       "yuzhi_json_normal": yuzhi_json_normal})
+                       "yuzhi_json_normal": yuzhi_json_normal,
+                       "json_data_date": json_data_date,
+                       })
 
 
 def charts(request):
@@ -136,6 +169,106 @@ def charts(request):
     yuzhi = ThresholdValue.objects.get(id=1)
     yuzhi_json_yellow = json.dumps(yuzhi.threshold_value_yellow)
     yuzhi_json_normal = json.dumps(yuzhi.threshold_value_normal)
+    # 下面为charts2的时间以及数据
+    d = datetime.datetime.now()
+    d1 = d - datetime.timedelta(days=1)
+    d2 = d - datetime.timedelta(days=2)
+    d3 = d - datetime.timedelta(days=3)
+    d4 = d - datetime.timedelta(days=4)
+    d5 = d - datetime.timedelta(days=5)
+    d6 = d - datetime.timedelta(days=6)
+    day = str(d.strftime("%m-%d"))
+    day1 = str(d1.strftime("%m-%d"))
+    day2 = str(d2.strftime("%m-%d"))
+    day3 = str(d3.strftime("%m-%d"))
+    day4 = str(d4.strftime("%m-%d"))
+    day5 = str(d5.strftime("%m-%d"))
+    day6 = str(d6.strftime("%m-%d"))
+    a = []
+    a.append(day6)
+    a.append(day5)
+    a.append(day4)
+    a.append(day3)
+    a.append(day2)
+    a.append(day1)
+    a.append(day)
+    json_data_date = json.dumps(a)
+    # 下面为每天的人流量平均数据
+    people_data_list = []
+    shuju_1 = data.objects.filter(time__contains=day6)
+    shuju_2 = data.objects.filter(time__contains=day5)
+    shuju_3 = data.objects.filter(time__contains=day4)
+    shuju_4 = data.objects.filter(time__contains=day3)
+    shuju_5 = data.objects.filter(time__contains=day2)
+    shuju_6 = data.objects.filter(time__contains=day1)
+    shuju_7 = data.objects.filter(time__contains=day)
+    count_p = 0
+    for i in shuju_1:
+        count_p += int(i.pedestrian_flow)
+    if (shuju_1.count() == 0):
+        people_data_1 = 0
+    else:
+        people_data_1 = int(count_p) / int(shuju_1.count())
+    people_data_list.append(people_data_1)
+    count_p = 0
+    for i in shuju_2:
+        count_p += i.pedestrian_flow
+    if (shuju_1.count() == 0):
+        people_data_2 = 0
+    else:
+        people_data_2 = int(count_p) / int(shuju_2.count())
+    people_data_list.append(people_data_2)
+    count_p = 0
+    for i in shuju_3:
+        count_p += i.pedestrian_flow
+    if (shuju_3.count() == 0):
+        people_data_3 = 0
+    else:
+        people_data_3 = int(count_p) / int(shuju_3.count())
+    people_data_list.append(people_data_3)
+    count_p = 0
+    for i in shuju_4:
+        count_p += i.pedestrian_flow
+    if (shuju_4.count() == 0):
+        people_data_4 = 0
+    else:
+        people_data_4 = int(count_p) / int(shuju_4.count())
+    people_data_list.append(people_data_4)
+    count_p = 0
+    for i in shuju_5:
+        count_p += i.pedestrian_flow
+    if (shuju_5.count() == 0):
+        people_data_5 = 0
+    else:
+        people_data_5 = int(count_p) / int(shuju_5.count())
+    people_data_list.append(people_data_5)
+    count_p = 0
+    for i in shuju_6:
+        count_p += i.pedestrian_flow
+    if (shuju_6.count() == 0):
+        people_data_6 = 0
+    else:
+        people_data_6 = int(count_p) / int(shuju_6.count())
+    people_data_list.append(people_data_6)
+    count_p = 0
+    for i in shuju_7:
+        count_p += i.pedestrian_flow
+    if (shuju_7.count() == 0):
+        people_data_7 = 0
+    else:
+        people_data_7 = int(count_p) / int(shuju_7.count())
+    people_data_list.append(people_data_7)
+    red_day = 0
+    yellow_day = 0
+    green_day = 0
+    for i in people_data_list:
+        if i > int(yuzhi_json_yellow):
+            red_day += 1
+        elif i > int(yuzhi_json_normal):
+            yellow_day += 1
+        else:
+            green_day += 1
+    people_data = json.dumps(people_data_list)
     return render(request, "charts.html",
                   {"json_data_time": json_data_time,
                    "json_data_data": json_data_data,
@@ -149,7 +282,12 @@ def charts(request):
                    "current_count": current_count,
                    "yuzhi": yuzhi,
                    "yuzhi_json_yellow": yuzhi_json_yellow,
-                   "yuzhi_json_normal": yuzhi_json_normal
+                   "yuzhi_json_normal": yuzhi_json_normal,
+                   "json_data_date": json_data_date,
+                   "people_data": people_data,
+                   "green_day": green_day,
+                   "yellow_day": yellow_day,
+                   "red_day": red_day,
                    })
 
 
@@ -173,7 +311,7 @@ def register(request):
             new_info.save()
             return render(request, "register.html", {"message": message})
         else:
-            message=user_form.errors
+            message = user_form.errors
             return render(request, "register.html", {"message": message})
     else:
         user_form = RegistrationForm()
@@ -197,3 +335,26 @@ def part_flush(request):
         datas[0].location
     ]
     return HttpResponse(json.dumps(results), content_type='application/json')
+
+
+def Flow_trend(request):
+    d = datetime.datetime.now()
+    d1 = d - datetime.timedelta(days=1)
+    d2 = d - datetime.timedelta(days=2)
+    d3 = d - datetime.timedelta(days=3)
+    d4 = d - datetime.timedelta(days=4)
+    d5 = d - datetime.timedelta(days=5)
+    d6 = d - datetime.timedelta(days=6)
+    day1 = str(d1.strftime("%m-%d"))
+    day2 = str(d2.strftime("%m-%d"))
+    day3 = str(d3.strftime("%m-%d"))
+    day4 = str(d4.strftime("%m-%d"))
+    day5 = str(d5.strftime("%m-%d"))
+    day6 = str(d6.strftime("%m-%d"))
+    a = []
+    a.append(day6)
+    a.append(day5)
+    a.append(day4)
+    a.append(day3)
+    a.append(day2)
+    a.append(day1)

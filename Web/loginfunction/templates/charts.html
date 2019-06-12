@@ -53,13 +53,13 @@
                                 <canvas id="myBarChart" width="100" height="50"></canvas>
                             </div>
                             <div class="col-sm-4 text-center my-auto">
-                                <div class="h4 mb-0 text-primary">一天</div>
+                                <div class="h4 mb-0 text-primary">{{ green_day }}天</div>
                                 <div class="small text-muted">正常人流天数</div>
                                 <hr>
-                                <div class="h4 mb-0 text-warning">两天</div>
+                                <div class="h4 mb-0 text-warning">{{ yellow_day }}天</div>
                                 <div class="small text-muted">黄色预警天数</div>
                                 <hr>
-                                <div class="h4 mb-0 text-success">三天</div>
+                                <div class="h4 mb-0 text-danger">{{ red_day }}天</div>
                                 <div class="small text-muted">红色预警天数</div>
                             </div>
                         </div>
@@ -246,13 +246,13 @@
         {
             type: "bar",
             data: {
-                labels: ["周一", "周二", "周三", "周四", "周五", "周六", "周日"],
+                labels: {{ json_data_date| safe }},
                 datasets: [
                     {
                         label: "人流量",
                         backgroundColor: "rgba(2,117,216,1)",
                         borderColor: "rgba(2,117,216,1)",
-                        data: [4215, 5312, 6251, 7841, 9821, 14984, 12345]
+                        data: {{ people_data|safe }}
                     }
                 ]
             },
