@@ -1,16 +1,16 @@
 <div class="card mb-3">
             <div class="card-header">
-                <i class="fa fa-table"></i> 人员信息表
+                <i class="fa fa-table"></i> 历史信息表
             </div>
             <div class="card-body">
                 <div class="table-responsive">
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                          <tr>
-                            <th>姓名</th>
+                            <th>时间</th>
                             <th>地点</th>
-                            <th>维护职员电话</th>
-                            <th>WeiChart</th>
+                            <th>人流量</th>
+                            <th>异常视频</th>
                         </tr>
                         </thead>
                         <tfoot>
@@ -19,7 +19,7 @@
                         {% for data in datas %}
                             <tr>
                            {% for i in data %}
-                               <td>{{ i }}</td>
+                               <td>{{ i }} </td>
                            {% endfor %}
                             </tr>
                         {% endfor %}
@@ -27,7 +27,7 @@
                     </table>
                 </div>
             </div>
-            <div class="card-footer small text-muted" id="update_table_time"> 11:59 PM</div>
+            <div class="card-footer small text-muted" id="update_table_time"> </div>
         <script>
             var d=new Date();
             document.getElementById("update_table_time").innerHTML="更新于"+d.toLocaleString();
