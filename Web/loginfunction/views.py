@@ -37,9 +37,9 @@ def index(request):
         datas = [
             [abnormal.time, abnormal.location, abnormal.pedestrian_flow, "已上传" if (abnormal.is_overloading) else "未上传"]
             for abnormal in counts]
-        viewdata = data.objects.filter(location="餐厅").order_by("-id")[:13]
-        viewdata_2 = data.objects.filter(location="宿舍").order_by("-id")[:13]
-        viewdata_3 = data.objects.filter(location="图书馆").order_by("-id")[:13]
+        viewdata = data.objects.filter(location="地点一").order_by("-id")[:13]
+        viewdata_2 = data.objects.filter(location="地点二").order_by("-id")[:13]
+        viewdata_3 = data.objects.filter(location="其他").order_by("-id")[:13]
         context = [[i.time] for i in viewdata]
         context_2 = [[i.pedestrian_flow] for i in viewdata]
         context_canting = [[i.time] for i in viewdata]
@@ -358,3 +358,8 @@ def Flow_trend(request):
     a.append(day3)
     a.append(day2)
     a.append(day1)
+
+
+def video(request):
+    video=data.objects.filter(is_overloading=1).order_by("-id")
+    return render(request, "video.html",{"video":video})

@@ -182,7 +182,7 @@
                         ticks: {maxTicksLimit: 7}
                     }],
                     yAxes: [{
-                        ticks: {min: 0, max: 4e4, maxTicksLimit: 5},
+                        ticks: {min: 0, max: 150, maxTicksLimit: 5},
                         gridLines: {color: "rgba(0, 0, 0, .125)"}
                     }]
                 },
@@ -204,10 +204,10 @@
                 l = data[2];
                 myLineChart.data.labels.pop();
                 myLineChart.data.labels.unshift(k);
-                if (l == "餐厅") {
+                if (l == "地点一") {
                     myLineChart.data.datasets[0].data.pop();
                     myLineChart.data.datasets[0].data.unshift(s);
-                } else if (l == "宿舍") {
+                } else if (l == "地点二") {
                     myLineChart.data.datasets[1].data.pop();
                     myLineChart.data.datasets[1].data.unshift(s);
                 } else {
@@ -276,7 +276,7 @@
                             ticks:
                                 {
                                     min: 0,
-                                    max: 15e3,
+                                    max: 150,
                                     maxTicksLimit: 5
                                 },
                             gridLines: {display: !0}

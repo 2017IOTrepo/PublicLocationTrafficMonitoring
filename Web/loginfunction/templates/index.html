@@ -65,7 +65,6 @@
                     <a class="card-footer text-white small z-1 " href="#">
                         <span class="float-left " id="sos">当前状态:正常情况</span>
                     </a>
-
                 </div>
                 <div class="card-footer small text-muted">更新时间:{{ current_time }}</div>
             </div>
@@ -152,7 +151,7 @@
                 labels: labels,
                 datasets: [
                     {
-                        label: "餐厅",
+                        label: "地点一",
                         lineTension: .3,
                         backgroundColor: "rgba(2,117,216,0.2)",
                         borderColor: "rgba(2,117,216,1)",
@@ -166,7 +165,7 @@
                         data: data
                     },
                     {
-                        label: "宿舍",
+                        label: "地点二",
                         lineTension: .3,
                         backgroundColor: "rgba(0,0,0,0.2)",
                         borderColor: "rgba(0,0,0,1)",
@@ -203,7 +202,7 @@
                         ticks: {maxTicksLimit: 7}
                     }],
                     yAxes: [{
-                        ticks: {min: 0, max: 4e4, maxTicksLimit: 5},
+                        ticks: {min: 0, max: 150, maxTicksLimit: 5},
                         gridLines: {color: "rgba(0, 0, 0, .125)"}
                     }]
                 },
@@ -225,10 +224,10 @@
                 l = data[2];
                 myLineChart.data.labels.pop();
                 myLineChart.data.labels.unshift(k);
-                if (l == "餐厅") {
+                if (l == "地点一") {
                     myLineChart.data.datasets[0].data.pop();
                     myLineChart.data.datasets[0].data.unshift(s);
-                } else if (l == "宿舍") {
+                } else if (l == "地点二") {
                     myLineChart.data.datasets[1].data.pop();
                     myLineChart.data.datasets[1].data.unshift(s);
                 } else {

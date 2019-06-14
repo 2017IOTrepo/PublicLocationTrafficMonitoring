@@ -18,6 +18,7 @@ from django.contrib import admin
 from loginfunction import views as login
 from loginfunction import urls as login_urls
 from loginfunction.views import part_flush
+from loginfunction.views import video
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -25,5 +26,6 @@ urlpatterns = [
     url(r'^index/', login.index,name="index"),
     url(r'^charts/', login.charts,name="charts"),
     url(r'^tables/', login.tables,name="tables"),
+    url(r'^video/', login.video,name="video"),
     url(r'^part_flush/',part_flush),
 ]

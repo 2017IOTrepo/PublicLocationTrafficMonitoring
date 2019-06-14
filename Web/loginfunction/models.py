@@ -10,7 +10,7 @@ from random import choice
 
 
 class user(models.Model):
-    user = models.OneToOneField(User, unique=True,on_delete=models.CASCADE)
+    user = models.OneToOneField(User, unique=True, on_delete=models.CASCADE)
     email = models.EmailField(unique=True)
     name = models.CharField(max_length=50, null=True)
     local = models.CharField(max_length=50, null=True)
@@ -26,13 +26,12 @@ class user(models.Model):
         verbose_name = u'用户'
         verbose_name_plural = u'用户'
 
-
     # 创建新的人物
     def insertone(self, **info):
         if user.objects.get_or_create(name=info['name'],
-                                                location=info['location'],
-                                                p_number=info['p_number'],
-                                                weixin=info['weixin']):
+                                      location=info['location'],
+                                      p_number=info['p_number'],
+                                      weixin=info['weixin']):
             return True
         return False
 
@@ -85,8 +84,8 @@ class data(models.Model):
         verbose_name_plural = '人流量'
 
     def insert_data(self, **info):
-        info = {'location': choice(["餐厅","宿舍","图书馆"]),
-                'pedestrian_flow': random.randint(0, 40000),
+        info = {'location': choice(["地点一", "地点二", "其他"]),
+                'pedestrian_flow': random.randint(0, 150),
                 'is_overloading': 1,
                 'abnormal_video': None,
                 'time': str(time.strftime("%m-%d %H:%M", time.localtime()))}
@@ -97,5 +96,3 @@ class data(models.Model):
                                       time=info['time']):
             return True
         return False
-
-

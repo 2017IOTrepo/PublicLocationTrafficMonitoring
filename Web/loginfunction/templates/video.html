@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>人流管理系统</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap core CSS-->
+    <link href={% static "vendor/bootstrap/css/bootstrap.min.css" %} rel="stylesheet">
+    <!-- Custom fonts for this template-->
+    <link href={% static "vendor/font-awesome/css/font-awesome.min.css" %} rel="stylesheet" type="text/css">
+    <link href={% static "vendor/font-awesome/css/font-awesome.min.css" %} rel="stylesheet" type="text">
+    <!-- Page level plugin CSS-->
+    <link href={% static "vendor/datatables/dataTables.bootstrap4.css" %} rel="stylesheet">
+    <!-- Custom styles for this template-->
+    <link href={% static "css/sb-admin.css" %} rel="stylesheet">
+</head>
+{% if user.is_authenticated %}
+    <body class="fixed-nav sticky-footer bg-dark" id="page-top">
+    <!-- Navigation-->
+    {% include "model.html" %}
+    <div class="content-wrapper">
+    <div class="container-fluid">
+        <!-- Breadcrumbs-->
+        <div class="card-header">
+            <i class="fa fa-newspaper-o"> </i>
+            当前人流信息:
+        </div>
+        {% for f in video %}
+            <div class="col-xl-12 mb-4 h-100 w-100">
+                <div class="card text-white bg-danger o-hidden h-100 w-100" id="video">
+                    <div class="card-body">
+                        <div class="mr-5 text-center">{{ f.location }} {{ f.time }} 异常视频</div>
+                    </div>
+                    <a class="various iframe card-footer text-white small z-1 "
+                       href={{ f.abnormal_video }} target="_blank">
+                        <span class=" float-left" id="video">点击查看异常视频</span>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <footer class="sticky-footer">
+        <div class="container">
+        </div>
+    </footer>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fa fa-angle-up"></i>
+    </a>
+    <!-- Logout Modal-->
+    {% include "logout_model.html" %}
+
+{% elif  not user.is_authenticated %}
+    {#    <meta http-equiv="refresh" content="0" href={% url "login:login" %}>#}
+    <script>
+        const redirect = (url, asLink = true) =>
+            asLink ? (window.location.href = url) : window.location.replace(url);
+
+        redirect('{% url "login:login" %}');
+    </script>
+{% endif %}
+<!-- Bootstrap core JavaScript-->
+<script src={% static "vendor/jquery/jquery.min.js" %}></script>
+<script src={% static "vendor/bootstrap/js/bootstrap.bundle.min.js" %}></script>
+<!-- Core plugin JavaScript-->
+<script src={% static "vendor/jquery-easing/jquery.easing.min.js" %}></script>
+<!-- Page level plugin JavaScript-->
+<script src={% static "vendor/chart.js/Chart.min.js" %}></script>
+<script src={% static "vendor/datatables/jquery.dataTables.js" %}></script>
+<script src={% static "vendor/datatables/dataTables.bootstrap4.js" %}></script>
+<!-- Custom scripts for all pages-->
+<script src={% static "js/sb-admin.min.js" %}></script>
+<!-- Custom scripts for this page-->
+<script src={% static "js/sb-admin-datatables.min.js" %}></script>
+</div>
+</body>
+
